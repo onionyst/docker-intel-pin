@@ -18,8 +18,8 @@ RUN apt-add-repository -y ppa:ubuntu-toolchain-r/test && \
 WORKDIR /root
 
 # Pin
-ARG PIN_VERSION=3.23-98579-gb15ab7903
-ARG PIN_SHA256=996090dfeec7dd58db1babbc3c95f8e4abfcb9b0e1014b02ffdbc09224bb48c0
+ARG PIN_VERSION=3.24-98612-g6bd5931f2
+ARG PIN_SHA256=0b5183155d86a8aa7cbf7da968fbb37840c48cada94faadb9053489b75d373c8
 RUN curl -fsSL https://software.intel.com/sites/landingpage/pintool/downloads/pin-$PIN_VERSION-gcc-linux.tar.gz -o pin-$PIN_VERSION-gcc-linux.tar.gz && \
   echo "${PIN_SHA256}  pin-$PIN_VERSION-gcc-linux.tar.gz" | sha256sum -c && \
   tar zxf pin-$PIN_VERSION-gcc-linux.tar.gz && \
